@@ -116,7 +116,7 @@ function getPolynom(...coefficients) {
  */
 function memoize(func) {
   const cache = {};
-  return function (...args) {
+  return (...args) => {
     const cacheKey = JSON.stringify(args);
     if (cacheKey in cache) {
       return cache[cacheKey];
